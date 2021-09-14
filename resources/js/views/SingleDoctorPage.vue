@@ -26,18 +26,13 @@
             <div class="w-full md:w-9/12 mx-2 h-64">
                 <About :doctor="doctor" />
 
-                <div class="my-4"></div>
-
-                <!-- Experience and education -->
                 <div class="bg-white p-3 shadow-sm rounded-sm">
 
                     <div class="grid grid-cols-2">
                         <Experience/>
                         <Booking/>
                     </div>
-                    <!-- End of Experience and education grid -->
                 </div>
-                <!-- End of profile tab -->
             </div>
         </div>
     </div>
