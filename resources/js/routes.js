@@ -5,6 +5,7 @@ import Login from "./views/auth/Login";
 import Register from "./views/auth/Register";
 import Dashboard from "./views/Dashboard";
 import Doctors from "./views/Doctors";
+import SingleDoctorPage from "./views/SingleDoctorPage";
 
 const isLogin = (to, from, next) => {
     const token = localStorage.getItem("access_token");
@@ -35,9 +36,14 @@ const routes = [
         name: 'Home'
     },
     {
-        path: '/doctors',
+        path: '/doctor',
         component: Doctors,
         name: 'Doctors'
+    },
+    {
+        path: '/doctor/:id',
+        component: SingleDoctorPage,
+        name: 'SingleDoctorPage'
     },
     {
         path: '/auth',
