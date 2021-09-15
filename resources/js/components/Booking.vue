@@ -5,7 +5,6 @@
         </div>
         <ul class="list-inside space-y-2">
             <v-date-picker v-model="date" mode="dateTime" :min-date='new Date()' is24hr>
-
                 <template v-slot="{ inputValue, inputEvents }">
                     <input
                         class="px-2 py-1 border rounded focus:outline-none focus:border-blue-300"

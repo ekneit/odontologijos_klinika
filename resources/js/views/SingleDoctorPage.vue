@@ -9,7 +9,6 @@
                              alt="">
                     </div>
                     <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{ doctor.name }}</h1>
-                    <h3 class="text-gray-600 font-lg text-semibold leading-6">Owner at Her Company Inc.</h3>
                     <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">{{ doctor.description}}</p>
                     <ul
                         class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
@@ -25,9 +24,7 @@
             </div>
             <div class="w-full md:w-9/12 mx-2 h-64">
                 <About :doctor="doctor" />
-
                 <div class="bg-white p-3 shadow-sm rounded-sm">
-
                     <div class="grid grid-cols-2">
                         <Experience/>
                         <Booking/>

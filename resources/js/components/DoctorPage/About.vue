@@ -21,30 +21,18 @@
                     <div class="px-4 py-2">{{ doctor.name.split(' ')[1] }}</div>
                 </div>
                 <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Gender</div>
-                    <div class="px-4 py-2">Female</div>
-                </div>
-                <div class="grid grid-cols-2">
                     <div class="px-4 py-2 font-semibold">Contact No.</div>
-                    <div class="px-4 py-2">+11 998001001</div>
+                    <div class="px-4 py-2">{{ doctor.phone_number }}</div>
                 </div>
                 <div class="grid grid-cols-2">
                     <div class="px-4 py-2 font-semibold">Current Address</div>
-                    <div class="px-4 py-2">Beech Creek, PA, Pennsylvania</div>
-                </div>
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Permanant Address</div>
-                    <div class="px-4 py-2">Arlington Heights, IL, Illinois</div>
+                    <div class="px-4 py-2">{{ doctor.address }}</div>
                 </div>
                 <div class="grid grid-cols-2">
                     <div class="px-4 py-2 font-semibold">Email.</div>
                     <div class="px-4 py-2">
-                        <a class="text-blue-800" href="mailto:jane@example.com">{{doctor.email }}</a>
+                        <a class="text-blue-800">{{doctor.email }}</a>
                     </div>
-                </div>
-                <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Birthday</div>
-                    <div class="px-4 py-2">Feb 06, 1998</div>
                 </div>
             </div>
         </div>

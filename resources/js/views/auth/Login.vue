@@ -16,7 +16,7 @@
                             >
                                 Email
                             </label>
-                            <span class="w-full text-red-500 text-sm" v-if="errors.name">{{errors.name[0]}}</span>
+                            <span class="w-full text-red-500 text-sm" v-if="errors.name">{{ errors.name[0] }}</span>
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 name="email"
@@ -34,7 +34,8 @@
                             >
                                 Password
                             </label>
-                            <span class="w-full text-red-500 text-sm" v-if="errors.password">{{errors.password[0]}}</span>
+                            <span class="w-full text-red-500 text-sm"
+                                  v-if="errors.password">{{ errors.password[0] }}</span>
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                                 v-model="form.password"
@@ -62,11 +63,6 @@
                 <div class="flex flex-wrap mt-6 relative">
                     <div class="w-1/2">
 
-                    </div>
-                    <div class="w-1/2 text-right">
-                        <router-link to="/auth/register" class="text-blueGray-200">
-                            <small>Create new account</small>
-                        </router-link>
                     </div>
                 </div>
             </div>

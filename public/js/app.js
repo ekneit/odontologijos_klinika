@@ -2127,7 +2127,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "booking",
   data: function data() {
@@ -2320,18 +2319,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3408,9 +3395,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -3590,10 +3574,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
 //
 //
 //
@@ -24861,13 +24841,25 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(0),
+        _c("div", { staticClass: "grid grid-cols-2" }, [
+          _c("div", { staticClass: "px-4 py-2 font-semibold" }, [
+            _vm._v("Contact No.")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "px-4 py-2" }, [
+            _vm._v(_vm._s(_vm.doctor.phone_number))
+          ])
+        ]),
         _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
-        _vm._m(3),
+        _c("div", { staticClass: "grid grid-cols-2" }, [
+          _c("div", { staticClass: "px-4 py-2 font-semibold" }, [
+            _vm._v("Current Address")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "px-4 py-2" }, [
+            _vm._v(_vm._s(_vm.doctor.address))
+          ])
+        ]),
         _vm._v(" "),
         _c("div", { staticClass: "grid grid-cols-2" }, [
           _c("div", { staticClass: "px-4 py-2 font-semibold" }, [
@@ -24875,86 +24867,16 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "px-4 py-2" }, [
-            _c(
-              "a",
-              {
-                staticClass: "text-blue-800",
-                attrs: { href: "mailto:jane@example.com" }
-              },
-              [_vm._v(_vm._s(_vm.doctor.email))]
-            )
+            _c("a", { staticClass: "text-blue-800" }, [
+              _vm._v(_vm._s(_vm.doctor.email))
+            ])
           ])
-        ]),
-        _vm._v(" "),
-        _vm._m(4)
+        ])
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2" }, [
-      _c("div", { staticClass: "px-4 py-2 font-semibold" }, [_vm._v("Gender")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "px-4 py-2" }, [_vm._v("Female")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2" }, [
-      _c("div", { staticClass: "px-4 py-2 font-semibold" }, [
-        _vm._v("Contact No.")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "px-4 py-2" }, [_vm._v("+11 998001001")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2" }, [
-      _c("div", { staticClass: "px-4 py-2 font-semibold" }, [
-        _vm._v("Current Address")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "px-4 py-2" }, [
-        _vm._v("Beech Creek, PA, Pennsylvania")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2" }, [
-      _c("div", { staticClass: "px-4 py-2 font-semibold" }, [
-        _vm._v("Permanant Address")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "px-4 py-2" }, [
-        _vm._v("Arlington Heights, IL, Illinois")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2" }, [
-      _c("div", { staticClass: "px-4 py-2 font-semibold" }, [
-        _vm._v("Birthday")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "px-4 py-2" }, [_vm._v("Feb 06, 1998")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -26790,12 +26712,6 @@ var render = function() {
           ),
           _vm._v(" "),
           _c(
-            "h3",
-            { staticClass: "text-gray-600 font-lg text-semibold leading-6" },
-            [_vm._v("Owner at Her Company Inc.")]
-          ),
-          _vm._v(" "),
-          _c(
             "p",
             {
               staticClass: "text-sm text-gray-500 hover:text-gray-600 leading-6"
@@ -27239,31 +27155,22 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "flex flex-wrap mt-6 relative" }, [
-            _c("div", { staticClass: "w-1/2" }),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "w-1/2 text-right" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "text-blueGray-200",
-                    attrs: { to: "/auth/register" }
-                  },
-                  [_c("small", [_vm._v("Create new account")])]
-                )
-              ],
-              1
-            )
-          ])
+          _vm._m(0)
         ])
       ]
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-wrap mt-6 relative" }, [
+      _c("div", { staticClass: "w-1/2" })
+    ])
+  }
+]
 render._withStripped = true
 
 
