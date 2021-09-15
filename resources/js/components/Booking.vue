@@ -4,32 +4,31 @@
             <span class="tracking-wide">Book Time</span>
         </div>
         <ul class="list-inside space-y-2">
-            <div class="inline-flex text-lg border rounded-md shadow-lg p-2">
-                <select name="" class="px-2 outline-none appearance-none bg-transparent">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="02">03</option>
-                </select>
-                <span class="px-2">:</span>
-                <select name="" class="px-2 outline-none appearance-none bg-transparent">
-                    <option value="00">00</option>
-                    <option value="01">01</option>
-                </select>
-                <select name="" class="px-2 outline-none appearance-none bg-transparent">
-                    <option value="AM">AM</option>
-                    <option value="PM">PM</option>
-                </select>
-            </div>
-            <button class="mt-3  bg-green-500 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                Book
-            </button>
+            <v-date-picker v-model="date" mode="dateTime" :min-date='new Date()' is24hr>
+
+                <template v-slot="{ inputValue, inputEvents }">
+                    <input
+                        class="px-2 py-1 border rounded focus:outline-none focus:border-blue-300"
+                        :value="inputValue"
+                        v-on="inputEvents"
+                    />
+                </template>
+            </v-date-picker>
         </ul>
+        <button class="mt-3  bg-green-500 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            Book
+        </button>
     </div>
 </template>
 
 <script>
 export default {
-    name: "booking"
+    name: "booking",
+    data() {
+        return {
+            date: new Date(),
+        }
+    },
 }
 </script>
 

@@ -2,7 +2,8 @@ export default {
     state: {
         token: localStorage.getItem('access_token') || '',
         doctor:[],
-        doctors: []
+        doctors: [],
+        appiontments: []
 
     },
     mutations: {
@@ -17,6 +18,9 @@ export default {
         },
         setDoctor(state, playload) {
             return state.doctor = playload
+        },
+        setAppiontments(state, playload) {
+            return state.appiontments = playload
         }
     },
     actions: {
@@ -32,7 +36,7 @@ export default {
         },
         async userLogout({commit}) {
             try {
-                await axios.post("/api/logout", {headers: {'Authorization': `Basic ${this.state.token}`}});
+                await axios.post("/api/logout", {headers: {'Authorization': `Bearer ${this.state.token}`}});
                 localStorage.removeItem('access_token');
                 commit("setLoginToken");
             } catch (error) {
@@ -55,10 +59,52 @@ export default {
                 console.log(error.response.data.errors);
             }
         },
+        async createDoctor({commit},data) {
+            const getMessage = await axios.post(`/api/doctor/`, data , {headers: {'Authorization': `Bearer ${this.state.token}`}});
+            return getMessage;
+        },
+        async deleteDoctor({commit},id) {
+            try {
+                const getMessage = await axios.delete(`/api/doctor/${id}`, {headers: {'Authorization': `Bearer ${this.state.token}`}});
+                return getMessage;
+            } catch (error) {
+                console.log(error.response.data.errors);
+            }
+        },
+        async getAppointments({commit}) {
+            try {
+                const getAppointments = await axios.get(`/api/appiontments`, {headers: {'Authorization': `Bearer ${this.state.token}`}});
+                commit("setAppiontments", getAppointments.data.appointments);
+                return getAppointments;
+            } catch (error) {
+                console.log(error.response.data.errors);
+            }
+        },
+        async deleteAppointments({commit},id) {
+            try {
+                const getMessage = await axios.delete(`/api/appiontments/${id}`, {headers: {'Authorization': `Bearer ${this.state.token}`}});
+                return getMessage;
+            } catch (error) {
+                console.log(error.response.data.errors);
+            }
+        },
+        async approveAppointments({commit},id) {
+            try {
+                const getMessage = await axios.put(`/api/appiontments/${id}`, '', {headers: {'Authorization': `Bearer ${this.state.token}`}});
+                console.log(getMessage);
+                return getMessage;
+            } catch (error) {
+                console.log(error.response.data.errors);
+            }
+        },
+
 
     },
     getters: {
         isLoggedIn: state => !!state.token,
+        getDoctorByID: (state) => (id) => {
+            return state.doctors.filter(doctor => doctor === id);
+        }
     }
 
 

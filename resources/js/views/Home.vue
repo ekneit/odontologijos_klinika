@@ -48,7 +48,7 @@ export default {
         return {
             heroImage
         }
-    }
+    },
 }
 </script>
 

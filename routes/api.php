@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AppointmentController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DoctorController;
 use App\Http\Controllers\Api\RegisterController;
@@ -16,19 +17,10 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::middleware('auth:sanctum')->apiResource('/appiontments', AppointmentController::class);
+Route::apiResource('/doctor', DoctorController::class);
 
-//Route::middleware('auth:sanctum')->get('/user/', function (Request $request) {
-//    return $request->user();
-//});
-//Route::middleware('auth:sanctum')->get('/user/autenticated', function () {
-//    return true;
-//});
-//Route::apiResource('/user', UserController::class);
-//Route::post('/user/login', [userController::class, 'login']);
-//Route::post('/user/logout', [userController::class, 'logout']);
-//Route::apiResource('/user', UserController::class);
-// GOOD
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
-Route::apiResource('/doctor', DoctorController::class);
+
